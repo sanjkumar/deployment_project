@@ -1,0 +1,361 @@
+sanjeev@sanjeev:~/Desktop/deploy_project$ sudo sh -x ./start.sh
+[sudo] password for sanjeev: 
++ . /home/sanjeev/Desktop/deploy_project/cleanbuild.sh
++ SANDBOX=sandbox_
++ echo Using sandbox sandbox_
+Using sandbox sandbox_
++ /etc/init.d/apache2 stop
+ * Stopping web server apache2                                                  apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1 for ServerName
+ ... waiting .                                                           [ OK ]
++ /etc/init.d/mysql stop
+Rather than invoking init scripts through /etc/init.d, use the service(8)
+utility, e.g. service mysql stop
+
+Since the script you are attempting to invoke has been converted to an
+Upstart job, you may also use the stop(8) utility, e.g. stop mysql
+mysql stop/waiting
++ apt-get update
+Hit http://ie.archive.ubuntu.com precise Release.gpg
+Hit http://ie.archive.ubuntu.com precise-updates Release.gpg                   
+Hit http://ie.archive.ubuntu.com precise-backports Release.gpg                 
+Hit http://ie.archive.ubuntu.com precise Release                               
+Get:1 http://extras.ubuntu.com precise Release.gpg [72 B]                      
+Hit http://ppa.launchpad.net precise Release.gpg                               
+Hit http://ppa.launchpad.net precise Release.gpg                               
+Hit http://extras.ubuntu.com precise Release                                   
+Hit http://ppa.launchpad.net precise Release                                   
+Hit http://ie.archive.ubuntu.com precise-updates Release                       
+Hit http://ppa.launchpad.net precise Release                                   
+Hit http://extras.ubuntu.com precise/main Sources                              
+Hit http://ie.archive.ubuntu.com precise-backports Release                     
+Hit http://ie.archive.ubuntu.com precise/main Sources                          
+Hit http://ie.archive.ubuntu.com precise/restricted Sources                    
+Hit http://ie.archive.ubuntu.com precise/universe Sources                      
+Hit http://ie.archive.ubuntu.com precise/multiverse Sources                    
+Hit http://ie.archive.ubuntu.com precise/main i386 Packages                    
+Hit http://ppa.launchpad.net precise/main Sources                              
+Hit http://ppa.launchpad.net precise/main i386 Packages                        
+Ign http://ppa.launchpad.net precise/main TranslationIndex                     
+Hit http://ie.archive.ubuntu.com precise/restricted i386 Packages              
+Hit http://ie.archive.ubuntu.com precise/universe i386 Packages                
+Hit http://ie.archive.ubuntu.com precise/multiverse i386 Packages              
+Hit http://ie.archive.ubuntu.com precise/main TranslationIndex                 
+Hit http://ie.archive.ubuntu.com precise/multiverse TranslationIndex           
+Hit http://ie.archive.ubuntu.com precise/restricted TranslationIndex           
+Hit http://ie.archive.ubuntu.com precise/universe TranslationIndex             
+Hit http://ie.archive.ubuntu.com precise-updates/main Sources                  
+Hit http://ie.archive.ubuntu.com precise-updates/restricted Sources            
+Hit http://security.ubuntu.com precise-security Release.gpg                    
+Hit http://extras.ubuntu.com precise/main i386 Packages                        
+Ign http://extras.ubuntu.com precise/main TranslationIndex                     
+Hit http://ie.archive.ubuntu.com precise-updates/universe Sources              
+Hit http://ie.archive.ubuntu.com precise-updates/multiverse Sources            
+Hit http://ie.archive.ubuntu.com precise-updates/main i386 Packages            
+Hit http://ie.archive.ubuntu.com precise-updates/restricted i386 Packages      
+Hit http://ie.archive.ubuntu.com precise-updates/universe i386 Packages        
+Hit http://ie.archive.ubuntu.com precise-updates/multiverse i386 Packages      
+Hit http://ppa.launchpad.net precise/main Sources                              
+Hit http://ppa.launchpad.net precise/main i386 Packages                        
+Ign http://ppa.launchpad.net precise/main TranslationIndex                     
+Hit http://ie.archive.ubuntu.com precise-updates/main TranslationIndex         
+Hit http://ie.archive.ubuntu.com precise-updates/multiverse TranslationIndex   
+Hit http://ie.archive.ubuntu.com precise-updates/restricted TranslationIndex   
+Hit http://ie.archive.ubuntu.com precise-updates/universe TranslationIndex     
+Hit http://ie.archive.ubuntu.com precise-backports/main Sources                
+Hit http://ie.archive.ubuntu.com precise-backports/restricted Sources          
+Hit http://ie.archive.ubuntu.com precise-backports/universe Sources            
+Hit http://ie.archive.ubuntu.com precise-backports/multiverse Sources          
+Hit http://ie.archive.ubuntu.com precise-backports/main i386 Packages          
+Hit http://ie.archive.ubuntu.com precise-backports/restricted i386 Packages    
+Hit http://ie.archive.ubuntu.com precise-backports/universe i386 Packages      
+Hit http://ie.archive.ubuntu.com precise-backports/multiverse i386 Packages    
+Hit http://ie.archive.ubuntu.com precise-backports/main TranslationIndex       
+Hit http://ie.archive.ubuntu.com precise-backports/multiverse TranslationIndex 
+Hit http://ie.archive.ubuntu.com precise-backports/restricted TranslationIndex 
+Hit http://ie.archive.ubuntu.com precise-backports/universe TranslationIndex   
+Hit http://ie.archive.ubuntu.com precise/main Translation-en                   
+Hit http://ie.archive.ubuntu.com precise/multiverse Translation-en             
+Hit http://ie.archive.ubuntu.com precise/restricted Translation-en             
+Hit http://ie.archive.ubuntu.com precise/universe Translation-en               
+Hit http://security.ubuntu.com precise-security Release                        
+Hit http://ie.archive.ubuntu.com precise-updates/main Translation-en           
+Hit http://ie.archive.ubuntu.com precise-updates/multiverse Translation-en     
+Hit http://ie.archive.ubuntu.com precise-updates/restricted Translation-en     
+Hit http://ie.archive.ubuntu.com precise-updates/universe Translation-en       
+Hit http://ie.archive.ubuntu.com precise-backports/main Translation-en         
+Hit http://ie.archive.ubuntu.com precise-backports/multiverse Translation-en   
+Hit http://ie.archive.ubuntu.com precise-backports/restricted Translation-en   
+Hit http://ie.archive.ubuntu.com precise-backports/universe Translation-en     
+Get:2 http://linux.dropbox.com precise Release.gpg [489 B]                     
+Hit http://security.ubuntu.com precise-security/main Sources                   
+Ign http://extras.ubuntu.com precise/main Translation-en_IE                    
+Ign http://extras.ubuntu.com precise/main Translation-en                       
+Get:3 http://linux.dropbox.com precise Release [2,603 B]                       
+Ign http://ppa.launchpad.net precise/main Translation-en_IE                    
+Hit http://security.ubuntu.com precise-security/restricted Sources             
+Hit http://security.ubuntu.com precise-security/universe Sources               
+Hit http://security.ubuntu.com precise-security/multiverse Sources             
+Hit http://security.ubuntu.com precise-security/main i386 Packages             
+Hit http://security.ubuntu.com precise-security/restricted i386 Packages       
+Hit http://security.ubuntu.com precise-security/universe i386 Packages         
+Hit http://security.ubuntu.com precise-security/multiverse i386 Packages       
+Hit http://security.ubuntu.com precise-security/main TranslationIndex          
+Hit http://security.ubuntu.com precise-security/multiverse TranslationIndex    
+Hit http://security.ubuntu.com precise-security/restricted TranslationIndex    
+Ign http://ppa.launchpad.net precise/main Translation-en                       
+Ign http://ppa.launchpad.net precise/main Translation-en_IE                    
+Ign http://ppa.launchpad.net precise/main Translation-en                       
+Hit http://security.ubuntu.com precise-security/universe TranslationIndex      
+Hit http://toolbelt.heroku.com ./ Release.gpg                                  
+Get:4 http://linux.dropbox.com precise/main i386 Packages [1,142 B]            
+Hit http://security.ubuntu.com precise-security/main Translation-en            
+Hit http://security.ubuntu.com precise-security/multiverse Translation-en      
+Ign http://linux.dropbox.com precise/main TranslationIndex                     
+Hit http://security.ubuntu.com precise-security/restricted Translation-en      
+Hit http://security.ubuntu.com precise-security/universe Translation-en        
+Hit http://toolbelt.heroku.com ./ Release                                      
+Ign http://linux.dropbox.com precise/main Translation-en_IE                                                              
+Ign http://linux.dropbox.com precise/main Translation-en                                                                 
+Hit http://toolbelt.heroku.com ./ Packages                                                         
+Hit http://dl.google.com stable Release.gpg                                                        
+Hit http://dl.google.com stable Release                  
+Hit http://dl.google.com stable/main i386 Packages       
+Ign http://dl.google.com stable/main TranslationIndex                
+Ign http://dl.google.com stable/main Translation-en_IE               
+Ign http://dl.google.com stable/main Translation-en                  
+Ign http://toolbelt.heroku.com ./ Translation-en_IE                                                                                                   
+Ign http://toolbelt.heroku.com ./ Translation-en                                                                                                      
+Fetched 4,306 B in 10s (427 B/s)                                                                                                                      
+Reading package lists... Done
++ apt-get -q -y remove apache2
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages were automatically installed and are no longer required:
+  libsm-dev thunderbird-globalmenu libmemcache-client-ruby1.8 libice-dev libjs-scriptaculous x11proto-kb-dev ttf-dejavu-extra ruby-blankslate
+  gir1.2-ubuntuoneui-3.0 rubygems ruby-i18n rake ruby-activeresource-2.3 ruby-actionmailer-2.3 libtzinfo-ruby ruby-activerecord-2.3 libxdmcp-dev
+  ruby-builder xtrans-dev ruby-rack ruby-activesupport-2.3 x11proto-core-dev ruby-rchardet ruby-tmail libubuntuoneui-3.0-1 libgif4 xorg-sgml-doctools
+  libxt-dev tzdata-java libtzinfo-ruby1.8 x11proto-input-dev libpthread-stubs0-dev libxau-dev libpthread-stubs0 libmemcache-client-ruby
+  ruby-actionpack-2.3 libx11-dev libjs-prototype libx11-doc libxcb1-dev ruby-rails-2.3 ruby-text-format
+Use 'apt-get autoremove' to remove them.
+The following packages will be REMOVED:
+  apache2
+0 upgraded, 0 newly installed, 1 to remove and 0 not upgraded.
+After this operation, 29.7 kB disk space will be freed.
+(Reading database ... 321717 files and directories currently installed.)
+Removing apache2 ...
++ apt-get -q -y install apache2
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages were automatically installed and are no longer required:
+  libsm-dev thunderbird-globalmenu libmemcache-client-ruby1.8 libice-dev libjs-scriptaculous x11proto-kb-dev ttf-dejavu-extra ruby-blankslate
+  gir1.2-ubuntuoneui-3.0 rubygems ruby-i18n rake ruby-activeresource-2.3 ruby-actionmailer-2.3 libtzinfo-ruby ruby-activerecord-2.3 libxdmcp-dev
+  ruby-builder xtrans-dev ruby-rack ruby-activesupport-2.3 x11proto-core-dev ruby-rchardet ruby-tmail libubuntuoneui-3.0-1 libgif4 xorg-sgml-doctools
+  libxt-dev tzdata-java libtzinfo-ruby1.8 x11proto-input-dev libpthread-stubs0-dev libxau-dev libpthread-stubs0 libmemcache-client-ruby
+  ruby-actionpack-2.3 libx11-dev libjs-prototype libx11-doc libxcb1-dev ruby-rails-2.3 ruby-text-format
+Use 'apt-get autoremove' to remove them.
+The following NEW packages will be installed:
+  apache2
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 0 B/1,496 B of archives.
+After this operation, 29.7 kB of additional disk space will be used.
+Selecting previously unselected package apache2.
+(Reading database ... 321714 files and directories currently installed.)
+Unpacking apache2 (from .../apache2_2.2.22-1ubuntu1.4_i386.deb) ...
+Setting up apache2 (2.2.22-1ubuntu1.4) ...
++ apt-get -q -y remove mysql-server mysql-client
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages were automatically installed and are no longer required:
+  libsm-dev thunderbird-globalmenu libmemcache-client-ruby1.8 libice-dev libjs-scriptaculous x11proto-kb-dev ttf-dejavu-extra ruby-blankslate
+  gir1.2-ubuntuoneui-3.0 rubygems ruby-i18n libhtml-template-perl rake ruby-activeresource-2.3 mysql-server-5.5 ruby-actionmailer-2.3 libtzinfo-ruby
+  ruby-activerecord-2.3 libxdmcp-dev ruby-builder xtrans-dev ruby-rack ruby-activesupport-2.3 mysql-server-core-5.5 x11proto-core-dev ruby-rchardet
+  ruby-tmail libubuntuoneui-3.0-1 libgif4 xorg-sgml-doctools libxt-dev tzdata-java libtzinfo-ruby1.8 x11proto-input-dev libpthread-stubs0-dev
+  libxau-dev libpthread-stubs0 libmemcache-client-ruby ruby-actionpack-2.3 libx11-dev libjs-prototype libx11-doc libxcb1-dev ruby-rails-2.3
+  ruby-text-format
+Use 'apt-get autoremove' to remove them.
+The following packages will be REMOVED:
+  mysql-client mysql-server
+0 upgraded, 0 newly installed, 2 to remove and 0 not upgraded.
+After this operation, 231 kB disk space will be freed.
+(Reading database ... 321717 files and directories currently installed.)
+Removing mysql-client ...
+Removing mysql-server ...
++ echo mysql-server mysql-server/root_password password password
++ debconf-set-selections
++ echo mysql-server+  mysql-server/root_password_again password password
+debconf-set-selections
++ apt-get -q -y install mysql-server mysql-client
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages were automatically installed and are no longer required:
+  libsm-dev thunderbird-globalmenu libmemcache-client-ruby1.8 libice-dev libjs-scriptaculous x11proto-kb-dev ttf-dejavu-extra ruby-blankslate
+  gir1.2-ubuntuoneui-3.0 rubygems ruby-i18n rake ruby-activeresource-2.3 ruby-actionmailer-2.3 libtzinfo-ruby ruby-activerecord-2.3 libxdmcp-dev
+  ruby-builder xtrans-dev ruby-rack ruby-activesupport-2.3 x11proto-core-dev ruby-rchardet ruby-tmail libubuntuoneui-3.0-1 libgif4 xorg-sgml-doctools
+  libxt-dev tzdata-java libtzinfo-ruby1.8 x11proto-input-dev libpthread-stubs0-dev libxau-dev libpthread-stubs0 libmemcache-client-ruby
+  ruby-actionpack-2.3 libx11-dev libjs-prototype libx11-doc libxcb1-dev ruby-rails-2.3 ruby-text-format
+Use 'apt-get autoremove' to remove them.
+The following NEW packages will be installed:
+  mysql-client mysql-server
+0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
+Need to get 0 B/22.2 kB of archives.
+After this operation, 231 kB of additional disk space will be used.
+Selecting previously unselected package mysql-client.
+(Reading database ... 321712 files and directories currently installed.)
+Unpacking mysql-client (from .../mysql-client_5.5.35-0ubuntu0.12.04.1_all.deb) ...
+Selecting previously unselected package mysql-server.
+Unpacking mysql-server (from .../mysql-server_5.5.35-0ubuntu0.12.04.1_all.deb) ...
+Setting up mysql-client (5.5.35-0ubuntu0.12.04.1) ...
+Setting up mysql-server (5.5.35-0ubuntu0.12.04.1) ...
++ cd /tmp
++ mkdir sandbox_
++ cd sandbox_/
++ git clone https://github.com/sanjkumar/deployment
+Cloning into 'deployment'...
+remote: Reusing existing pack: 10, done.
+remote: Total 10 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (10/10), done.
++ cd NCIRL/
+./start.sh: 23: cd: can't cd to NCIRL/
++ cp Apache/www/* /var/www/
+cp: cannot stat `Apache/www/*': No such file or directory
++ cp Apache/cgi-bin/* /usr/lib/cgi-bin/
+cp: cannot stat `Apache/cgi-bin/*': No such file or directory
++ chmod a+x /usr/lib/cgi-bin/accept_form.pl /usr/lib/cgi-bin/accept_form.pl.save /usr/lib/cgi-bin/accept_form.pl.save.1 /usr/lib/cgi-bin/hell.pl /usr/lib/cgi-bin/hello_wolrd.pl /usr/lib/cgi-bin/hello_world /usr/lib/cgi-bin/hello_world.pl /usr/lib/cgi-bin/testdb.pl
++ /etc/init.d/apache2 start
+ * Starting web server apache2                                                                                                                         apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1 for ServerName
+                                                                                                                                                [ OK ]
++ /etc/init.d/mysql start
+Rather than invoking init scripts through /etc/init.d, use the service(8)
+utility, e.g. service mysql start
+
+Since the script you are attempting to invoke has been converted to an
+Upstart job, you may also use the start(8) utility, e.g. start mysql
+mysql start/running, process 3070
++ cat
++ mysql -uroot -ppassword
+name	address
+Tony Montana	Miami
++ cd /tmp
++ rm -rf sandbox_
++ . /home/sanjeev/Desktop/deploy_project/deploy.sh
++ cd /tmp
++ SANDBOX=sandbox_
++ mkdir sandbox_
++ cd sandbox_
++ ERRORCHECK=0
++ mkdir webpackage
++ touch webpackage/index.htm
++ touch webpackage/form.htm
++ touch webpackage/script1.plx
++ touch webpackage/script2.plx
++ mkdir build
++ mkdir integrate
++ mkdir test
++ mkdir deploy
++ tar -zcvf webpackage_preBuild.tgz webpackage
+webpackage/
+webpackage/script1.plx
+webpackage/form.htm
+webpackage/index.htm
+webpackage/script2.plx
++ md5sum webpackage_preBuild.tgz
++ cut -f 1 -d 
++ MD5SUM=10ae89101e495bec3e2c60b67117a132
++ cat /tmp/md5sum
+cat: /tmp/md5sum: No such file or directory
++ PREVMD5SUM=
++ FILECHANGE=0
++ [[ 10ae89101e495bec3e2c60b67117a132 !=  ]]
+./start.sh: 27: /home/sanjeev/Desktop/deploy_project/deploy.sh: [[: not found
++ FILECHANGE=0
++ echo 10ae89101e495bec3e2c60b67117a132 equal to
+10ae89101e495bec3e2c60b67117a132 equal to
++ echo 10ae89101e495bec3e2c60b67117a132
++ [ 0 -eq 0 ]
++ echo no change in files, doing nothing and exiting
+no change in files, doing nothing and exiting
++ . /home/sanjeev/Desktop/deploy_project/log_monitor.sh
++ ADMINISTRATOR=sanj.judh@gmail.com
++ MAILSERVER=smtp.gmail.com
++ ERRORCOUNT=0
++ isApacheRunning
++ isRunning apache2
++ ps -ef
++ + + wcgrep -l
+ -v grep
+grep apache2
++ PROCESS_NUM=4
++ [ 4 -gt 0 ]
++ echo 4
+4
++ return 1
++ return 1
++ [ 1 -eq 1 ]
++ echo Apache process is Running
+Apache process is Running
++ isApacheListening
++ isTCPlisten 80
++ netstat -tupln
++ grep tcp
++ wc -l
++ grep 80
++ TCPCOUNT=1
++ [ 1 -gt 0 ]
++ return 1
++ return 1
++ [ 1 -eq 1 ]
++ echo Apache is Listening
+Apache is Listening
++ isApacheRemoteUp
++ isTCPremoteOpen 127.0.0.1 80
++ timeout 1 bash -c echo >/dev/tcp/127.0.0.1/80
++ return 1
++ return 1
++ [ 1 -eq 1 ]
++ echo Remote Apache TCP port is up
+Remote Apache TCP port is up
++ isMysqlRunning
++ isRunning mysqld
++ ps -ef
++ wc -l
++ grep -v grep
++ grep mysqld
++ PROCESS_NUM=1
++ [ 1 -gt 0 ]
++ echo 1
+1
++ return 1
++ return 1
++ [ 1 -eq 1 ]
++ echo Mysql process is Running
+Mysql process is Running
++ isMysqlListening
++ isTCPlisten 3306
++ netstat -tupln
++ wc -l
++ grep tcp
++ grep 3306
++ TCPCOUNT=1
++ [ 1 -gt 0 ]
++ return 1
++ return 1
++ [ 1 -eq 1 ]
++ echo Mysql is Listening
+Mysql is Listening
++ isMysqlRemoteUp
++ isTCPremoteOpen 127.0.0.1 3306
++ timeout 1 bash -c echo >/dev/tcp/127.0.0.1/3306
++ return 1
++ return 1
++ [ 1 -eq 1 ]
++ echo Remote Mysql TCP port is up
+Remote Mysql TCP port is up
++ [ 0 -eq 0 ]
++ perl /home/sanjeev/Desktop/deploy_project/sendmail.pl sanj.judh@gmail.com smtp.gmail.com
++ echo There is a problem with Apache or Mysql
++ exit
+sanjeev@sanjeev:~/Desktop/deploy_project$ 
