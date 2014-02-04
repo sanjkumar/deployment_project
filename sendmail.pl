@@ -13,18 +13,18 @@ use strict;
 
   my $email = Email::Simple->create(
       header => [
-          From    => 'sanj.jush@gmail.com',
-          To      => 'sanj.judh@gmail.com',
+          From    => 'sanj.judh@youryomail.com',
+          To      => 'sanj.judh@yourmail.com',
           Subject => 'Problems with the site',
       ],
       body => 'Site is Dead, Check all script and find problem... Sanj!',
   );
 
   my $sender = Email::Send->new(
-      {   mailer      => 'Gmail',
+      {   mailer      => 'Yourmail',
           mailer_args => [
-              username => 'sanj.judh@gmail.com',
-              password => 'sanj9347',
+              username => 'sanj.judh@xxxxxxxxx.com',
+              password => 'xxxxxxxxxxxxx',
           ]
       }
   );
